@@ -1,0 +1,20 @@
+
+    <string-array name="flink">
+        <item>Aunt</item>
+        <item>Brother</item>
+        <item>Cousin</item>
+        <item>Daughter</item>
+        <item>Father</item>
+        <item>Granddaughter</item>
+        <item>Grandfather</item>
+        <item>Grandmother</item>
+        <item>Grandson</item>
+        <item>Husband</item>
+        <item>Mother</item>
+        <item>Nephew</item>
+        <item>Niece</item>
+        <item>Sister</item>
+        <item>Son</item>
+        <item>Uncle</item>
+        <item>Wife</item>
+    </string-array>

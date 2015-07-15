@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FLink!</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_my">Details</string>
+    <string name="srel_spinner">Related</string>
+    <string name="title_activity_add_member">Add a Member</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_edit_done">Done</string>
+    <string name="action_goflink">Flink Now!</string>
+    <string name="action_delete">Delete</string>
+    <string name="empty">Empty</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
+    <string-array name="relation">
+        <item>Child</item>
+        <item>Cousin</item>
+        <item>Grand-Child</item>
+        <item>Grand-Parent</item>
+        <item>Parent</item>
+        <item>Parent\'s Sibling</item>
+        <item>Sibling</item>
+        <item>Sibling\'s Child</item>
+        <item>Spouse</item>
+    </string-array>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Family</item>
+        <item>\t\t\t\tChild</item>
+        <item>\t\t\t\tCousin</item>
+        <item>\t\t\t\tGrand-Child</item>
+        <item>\t\t\t\tGrand-Parent</item>
+        <item>\t\t\t\tParent</item>
+        <item>\t\t\t\tParent\'s Sibling</item>
+        <item>\t\t\t\tSibling</item>
+        <item>\t\t\t\tSibling\'s Child</item>
+        <item>\t\t\t\tSpouse</item>
+        <item >Help and Feedback</item>
+        <item >About</item>
+    </string-array>
+    <!-- Nav Drawer List Item Icons -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/ic_action_help</item>
+        <item>@drawable/ic_action_about</item>
+        <item>@drawable/ic_action_group</item>
+    </array>
+    <!-- Content Description -->
+    <string name="desc_list_item_icon">Item Icon</string>
+
+
+    <string name="title_activity_member_view_details">MemberViewDetailsActivity</string>
+    <string name="title_activity_add_yourself">Add Yourself First!</string>
+    <string name="title_activity_edit">Edit</string>
+    <string name="title_activity_flink">FLink now!</string>
+    <string name="action_import">Import</string>
+    <string name="action_export">Export</string>
+
+</resources>

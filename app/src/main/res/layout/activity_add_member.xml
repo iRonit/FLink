@@ -1,0 +1,193 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ronit.flink.AddMember"
+    android:fillViewport="true"
+    android:id="@+id/scrollView_add_member"
+    android:background="#EEEEEE"
+    android:theme="@style/Base.V14.Theme.AppCompat.Light"
+    android:transitionGroup="true">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:focusable="false"
+        android:theme="@style/Base.V14.Theme.AppCompat.Light">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolbar"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:theme="@style/Base.V14.Theme.AppCompat.Light">
+
+         <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/displaypic"
+            android:layout_below="@+id/toolbar"
+            android:transitionName="photo_hero"
+            android:src="@drawable/ic_action_person_dark"
+             android:clickable="true"
+             android:onClick="onClickAddDP"
+             android:scaleType="centerCrop" />
+
+         <EditText
+            android:layout_width="match_parent"
+            android:hint="Name"
+            android:id="@+id/name"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords|textPersonName"
+            android:layout_margin="16dp"
+             android:theme="@style/Base.V14.Theme.AppCompat.Light"
+             android:textColor="@android:color/black"
+             android:textColorHint="@color/hint_foreground_material_light" />
+
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+             android:theme="@style/ThemeOverlay.AppCompat.Light">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginLeft="16dp"
+                android:text="Gender:"
+                style="@style/Base.TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/black" />
+            <RadioGroup
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:paddingStart="150dp"
+                android:paddingLeft="150dp"
+                android:theme="@style/Base.Theme.AppCompat.Light">
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:checked="true"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/hint_foreground_material_light"
+                    style="@style/Base.Theme.AppCompat.Light" />
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Female"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/hint_foreground_material_light"
+                    style="@style/Base.Theme.AppCompat.Light" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Age"
+            android:id="@+id/age"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:layout_height="wrap_content"
+            android:phoneNumber="false"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_margin="16dp"
+            android:theme="@style/Base.Theme.AppCompat.Light"
+            android:textColorHint="@color/hint_foreground_material_light"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="Relation:"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:layout_height="wrap_content"
+            style="@style/Base.TextAppearance.AppCompat.Headline"
+            android:gravity="center_vertical"
+            android:textSize="20dp"
+            android:padding="16dp"
+            android:textColor="@android:color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <Spinner
+            android:layout_width="0dp"
+            android:hapticFeedbackEnabled="true"
+            android:id="@+id/rel"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:background="@color/colorPrimaryDark"
+            android:layout_height="match_parent"
+            android:spinnerMode="dialog"
+            android:prompt="@string/srel_spinner" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:text="to"
+            android:textSize="20sp"
+            android:layout_gravity="center_vertical"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:textColor="@android:color/black" />
+
+
+
+
+    </LinearLayout>
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:id="@+id/rname"
+                android:layout_weight="1"
+                android:minHeight="?android:attr/listPreferredItemHeight"
+                android:background="@color/colorPrimaryDark"
+                android:layout_height="match_parent"
+                android:singleLine="true"
+                android:inputType="textCapWords"
+                android:hint="Whom you already know"
+                android:gravity="center"
+                android:ems="10"
+                android:completionThreshold="1"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/holo_green_light" />
+
+    </LinearLayout>
+
+</ScrollView>
+        <ImageButton
+            android:id="@+id/fab_image_button_done"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/fab_button_margin_bottom"
+            android:layout_marginRight="@dimen/fab_button_margin_right"
+            android:background="@drawable/fab_shape"
+            android:src="@drawable/ic_action_accept"
+            android:tint="@android:color/white"/>
+
+
+</RelativeLayout>

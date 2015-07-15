@@ -1,0 +1,126 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ronit.flink.AddYourself"
+    android:background="#EEEEEE">
+
+<include
+    android:id="@+id/toolbar"
+    layout="@layout/toolbar"/>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/toolbar">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/toolbar"
+        android:weightSum="1">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:id="@+id/displaypic"
+            android:layout_below="@+id/toolbar"
+            android:transitionName="photo_hero"
+            android:src="@drawable/ic_action_person_dark"
+            android:clickable="true"
+            android:onClick="onClickAddDP"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="false" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Your Name"
+            android:id="@+id/myname"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords|textPersonName"
+            android:layout_margin="16dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/hint_foreground_material_light"
+            android:theme="@style/Base.V21.Theme.AppCompat.Light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:theme="@style/Base.V21.Theme.AppCompat.Light">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginLeft="16dp"
+                android:text="Gender:"
+                style="@style/Base.TextAppearance.AppCompat.Headline"
+                android:textColor="@android:color/black" />
+
+            <RadioGroup
+                android:id="@+id/mygender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:paddingStart="150dp"
+                android:paddingLeft="150dp">
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:checked="true"
+                    android:textColor="@android:color/black" />
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Female"
+                    android:textColor="@android:color/black" />
+            </RadioGroup>
+        </LinearLayout>
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:hint="Your Age"
+            android:id="@+id/myage"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:layout_height="wrap_content"
+            android:phoneNumber="false"
+            android:numeric="integer"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_margin="16dp"
+            android:theme="@style/Base.V21.Theme.AppCompat.Light"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/hint_foreground_material_light" />
+
+    </LinearLayout>
+
+
+</ScrollView>
+<ImageButton
+    android:id="@+id/fab_image_button_done"
+    android:layout_width="@dimen/fab_button_diameter"
+    android:layout_height="@dimen/fab_button_diameter"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:layout_marginBottom="@dimen/fab_button_margin_bottom"
+    android:layout_marginRight="@dimen/fab_button_margin_right"
+    android:background="@drawable/fab_shape"
+    android:src="@drawable/ic_action_accept"
+    android:tint="@android:color/white"/>
+
+
+</RelativeLayout>

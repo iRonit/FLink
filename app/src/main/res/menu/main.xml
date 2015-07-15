@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity" >
+
+    <item android:id="@+id/action_goflink"
+        android:icon="@drawable/ic_action_cc_bcc"
+        android:title="@string/action_goflink"
+        android:showAsAction="ifRoom"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_import"
+        android:title="@string/action_import"
+        android:orderInCategory="100"
+        android:showAsAction="never" />
+
+    <item android:id="@+id/action_export"
+        android:title="@string/action_export"
+        android:orderInCategory="105"
+        android:showAsAction="never" />
+
+</menu>

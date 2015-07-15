@@ -1,0 +1,17 @@
+<resources>
+    <color name="colorPrimary">#99CC00</color>
+    <color name="colorPrimaryDark">#669900</color>
+
+    <color name="colorSecondary">@color/material_deep_teal_200</color>
+    <color name="colorSecondaryDark">@color/material_deep_teal_500</color>
+
+    <color name="windowBackgroundColor">#aa552222</color>
+    <color name="light">#CCFF90</color>
+
+    <color name="list_item_title">@android:color/white</color>
+    <color name="counter_text_color">@android:color/white</color>
+    <color name="counter_text_bg">@android:color/black</color>
+    <color name="list_background_pressed">@color/colorPrimaryDark</color>
+    <color name="list_background">@color/windowBackgroundColor</color>
+    
+</resources>

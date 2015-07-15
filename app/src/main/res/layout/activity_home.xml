@@ -1,0 +1,137 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomeActivity"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@id/toolbar"
+            android:id="@+id/display"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_gravity="center_horizontal"
+            android:longClickable="false"
+            android:background="?attr/colorPrimaryDark">
+
+            <TextView
+                android:id="@+id/display_link1"
+                android:text="Hi!"
+                android:gravity="center"
+                android:fontFamily="@android:string/dialog_alert_title"
+                android:textSize="28sp"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:singleLine="false"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/display_link2"
+                android:text="Welcome To FLink!!"
+                android:gravity="center"
+                android:fontFamily="@android:string/dialog_alert_title"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:elegantTextHeight="false"
+                android:textColor="@android:color/holo_green_light"
+                android:paddingBottom="10dp"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/display"
+            android:horizontalSpacing="4dp"
+            android:verticalSpacing="4dp"
+            android:stretchMode="columnWidth"
+            android:choiceMode="singleChoice"
+            android:clickable="true"
+            android:drawSelectorOnTop="true"
+            android:listSelector="@color/hint_foreground_material_light"
+            android:transcriptMode="alwaysScroll"
+            android:fastScrollEnabled="true"
+            android:fastScrollAlwaysVisible="false"
+            android:scrollbarStyle="outsideInset"
+            android:smoothScrollbar="true"
+            android:background="@android:color/transparent"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:dividerHeight="1dp"
+            android:elevation="4dp" />
+        <TextView
+            android:id="@+id/empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title_activity_add_yourself"
+            android:textSize="35sp"
+            android:minHeight="?android:attr/listPreferredItemHeight"
+            android:background="@color/colorPrimaryDark"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+
+        <ImageButton
+            android:id="@+id/fab_image_button"
+            android:layout_width="@dimen/fab_button_diameter"
+            android:layout_height="@dimen/fab_button_diameter"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/fab_button_margin_bottom"
+            android:layout_marginRight="@dimen/fab_button_margin_right"
+            android:background="@drawable/fab_shape"
+            android:src="@drawable/fab_ic_add"
+            android:tint="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/windowBackgroundColor">
+
+        <ImageView
+            android:id="@+id/dp"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_action_person"/>
+
+        <!-- Listview to display slider menu -->
+        <ListView
+            android:id="@+id/list_slidermenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:choiceMode="singleChoice"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="0dp"
+            android:listSelector="@drawable/list_selector"/>
+
+     </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
